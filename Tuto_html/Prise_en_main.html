@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prise en main</title>
+    <link rel="icon" type="image/x-icon" href="../ressources/icons/web_icon.svg">
+</head>
+<body>
+<h1>Toturiel de prise en main HTML</h1>
+<p>Ceci est une page HTML basique pour se refaire la main sur le développement de pages web. Le but derrière l'élaboration de cette page est de revoir les bases du développement web.</br>
+Au travers de cette page, nous allons revoir les fondamentaux de HTML, les balises et leur utilisation. On étudiera aussi l'utilisation du CSS permettant de modifier le style des pages, ainsi que l'utilisation de JavaScript pour ajouter des fonctionnalités interactives.</p>
+
+<section>
+    <h2>Qu'est-ce que HTML ?</h2>
+    <p>HTML signifie « HyperText Markup Language » qu'on peut traduire par « langage de balises pour l'hypertexte ». Il est utilisé afin de créer et de représenter le contenu d'une page web et sa structure. D'autres technologies sont utilisées avec HTML pour décrire la présentation d'une page (CSS) et/ou ses fonctionnalités interactives (JavaScript). (Source : <a href="https://developer.mozilla.org/fr/docs/Web/HTML">MDN Web Docs</a>)</p>
+</section>
+
+<section>
+    <h2>Les balises</h2>
+    <p>Voici une liste des balises HTML les plus courantes :</p>
+    <ul id="balises">
+        <li>&lt;html&gt; : Élément racine d'une page HTML</li>
+        <li>&lt;head&gt; : Les métadonnées de la page</li>
+        <li>&lt;title&gt; : Titre de la page</li>
+        <li>&lt;body&gt; : Contenu de la page</li>
+        <li>&lt;h1&gt; à &lt;h6&gt; : Titres</li>
+        <li>&lt;p&gt; : Paragraphe</li>
+        <li>&lt;a&gt; : Lien</li>
+        <li>&lt;img&gt; : Image</li>
+        <li>&lt;ul&gt; : Liste non ordonnée</li>
+        <li>&lt;ol&gt; : Liste ordonnée</li>
+        <li>&lt;li&gt; : Élément de liste</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Le CSS</h2>
+    <p>Le CSS (Cascading Style Sheets) est un langage de style utilisé pour décrire la présentation d'un document HTML. Il permet de modifier l'apparence des éléments HTML, tels que les couleurs, les polices, les marges, les bordures, etc. Le CSS peut être intégré directement dans le fichier HTML ou être lié à un fichier externe.</p>
+</section>
+
+<section>
+    <h2>Gestion d'évènements</h2>
+    <p>La gestion d'évènements se fait via l'utilisation de JavaScript afin de rendre les pages web interactives. Pour faire appel à Javascript, il existe deux méthodes :</p>
+    <ul>
+        <li>Soit en rédigeant le code dans un fichier .js qui sera ensuite appelé dans le fichier HTML via l'ajout d'une balise <b>&lt;script&gt;</b>.</li>
+        <li>Soit en rédigeant le code directement dans la balise <b>&lt;script&gt;</b> du fichier HTML.</li>
+    </ul>
+    </p>
+
+    <p>Les boutons ci-dessous permettent de tester la gestion d'évènements :</p>
+
+    <button onclick="nbClickCount()">Afficher une alerte</button>
+    <button id="showImageBtn" onclick="showImage()">Afficher une image</button>
+
+    <div id="image" style="display: none;">
+        <p>Voici une image de la Tour Eiffel :</p>
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/330px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Tour Eiffel" width="330" height="220">
+    </div>
+</section>
+
+
+</body>
+<script>
+    let nbClick = 0;
+
+    function nbClickCount() {
+        nbClick++;
+        alert("Vous avez cliqué sur ce bouton "+nbClick+" fois")
+    }
+
+    function showImage() {
+        if (document.getElementById("image").style.display === "block") {
+            document.getElementById("image").style.display = "none";
+            document.getElementById("showImageBtn").innerText = "Afficher une image";
+        } else {
+            document.getElementById("image").style.display = "block";
+            document.getElementById("showImageBtn").innerText = "Cacher l'image";
+        }
+    }
+</script>
+<style>
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 20px;
+        background-color: #dabd93;
+    }
+
+    section {
+        margin-bottom: 30px;
+        background-color: #fae7c3;
+        padding: 15px;
+        padding-top: 5px;
+        border-radius: 4px;
+    }
+
+    button {
+        width: -webkit-fit-content;
+        height: 50px;
+        border-radius: 8px;
+        border: none;
+        background-color: #1e1e9a;
+        color: white;
+    }
+
+    button:hover {
+        background-color: #0d0d71;
+    }
+
+    #balises {
+        width: fit-content;
+        min-width: 350px;
+        margin-left: 20px;
+        background-color: #f7cfab;
+        border-radius: 4px;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        list-style-type: none;
+    }
+
+    #balises li {
+        margin-bottom: 5px;
+    }
+
+    #balises li:hover {
+        font-weight: bold;
+        color: #db2222;
+    }
+</style>
+</html>
