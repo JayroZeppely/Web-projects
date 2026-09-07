@@ -17,7 +17,8 @@ Au travers de cette page, nous allons revoir les fondamentaux de HTML, les balis
 
 <section>
     <h2>Les balises</h2>
-    <p>Voici une liste des balises HTML les plus courantes :</p>
+    <p>Une page HTML est composée de balises. Les balises sont des éléments qui permettent de structurer le contenu d'une page web. Elles sont généralement écrites entre des chevrons (<code>&lt;...&gt;</code>) et peuvent contenir du texte, d'autres balises ou des attributs.</p>
+    <p>Voici une liste non exhaustive des balises HTML les plus courantes :</p>
     <ul id="balises">
         <li>&lt;html&gt; : Élément racine d'une page HTML</li>
         <li>&lt;head&gt; : Les métadonnées de la page</li>
@@ -36,6 +37,13 @@ Au travers de cette page, nous allons revoir les fondamentaux de HTML, les balis
 <section>
     <h2>Le CSS</h2>
     <p>Le CSS (Cascading Style Sheets) est un langage de style utilisé pour décrire la présentation d'un document HTML. Il permet de modifier l'apparence des éléments HTML, tels que les couleurs, les polices, les marges, les bordures, etc. Le CSS peut être intégré directement dans le fichier HTML ou être lié à un fichier externe.</p>
+    <p>Voici un exemple de code CSS :</p>
+    <pre class="language"><code>body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}</code></pre>
+
+<p>Aujourd'hui, il existe des frameworks CSS comme Bootstrap ou Foundation qui facilitent la création de designs responsives. Néanmoins, avec un simple fichier CSS, il est possible de créer des designs modernes et attrayants.</p>
 </section>
 
 <section>
@@ -47,10 +55,21 @@ Au travers de cette page, nous allons revoir les fondamentaux de HTML, les balis
     </ul>
     </p>
 
+    Le code JavaScript est écrit de la manière suivante :
+    <pre class="language"><code><b>&lt;script&gt;</b>    
+    let nbClick = 0;
+
+    function nbClickCount() {
+        nbClick++;
+        alert("Vous avez cliqué sur ce bouton "+nbClick+" fois")
+    }
+<b>&lt;/script&gt;</b></code></pre>
+
     <p>Les boutons ci-dessous permettent de tester la gestion d'évènements :</p>
 
     <button onclick="nbClickCount()">Afficher une alerte</button>
     <button id="showImageBtn" onclick="showImage()">Afficher une image</button>
+    <button onclick="setRandomColor()">Changer la couleur de fond de la page</button>
 
     <div id="image" style="display: none;">
         <p>Voici une image de la Tour Eiffel :</p>
@@ -77,6 +96,22 @@ Au travers de cette page, nous allons revoir les fondamentaux de HTML, les balis
             document.getElementById("showImageBtn").innerText = "Cacher l'image";
         }
     }
+
+    // Les fonctions ci-dessous permettent de générer une couleur aléatoire et de l'appliquer à un élément HTML avec l'ID "colorpad"
+    // Ils s'agit de fonctions JavaScript prises de StackOverflow (https://stackoverflow.com/questions/1484506/random-color-generator)
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    function setRandomColor() {
+        document.body.style.backgroundColor = getRandomColor();
+    }
+
 </script>
 <style>
 
@@ -84,13 +119,22 @@ Au travers de cette page, nous allons revoir les fondamentaux de HTML, les balis
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 20px;
         background-color: #dabd93;
+        text-align: justify;
     }
 
     section {
         margin-bottom: 30px;
+        text-align: justify;
         background-color: #fae7c3;
         padding: 15px;
         padding-top: 5px;
+        border-radius: 4px;
+    }
+
+    pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        font-family: 'Courier New', Courier, monospace;
         border-radius: 4px;
     }
 
@@ -109,7 +153,6 @@ Au travers de cette page, nous allons revoir les fondamentaux de HTML, les balis
 
     #balises {
         width: fit-content;
-        min-width: 350px;
         margin-left: 20px;
         background-color: #f7cfab;
         border-radius: 4px;
