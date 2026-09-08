@@ -25,3 +25,13 @@ body {
     text-decoration: bold;
     color: #152fc4;
 }
+
+#project-name {
+    font-weight: bold;
+    color: #b7d841;
+}
+
+#project-name:hover {
+    color: #5fd841;
+    cursor: pointer;
+}

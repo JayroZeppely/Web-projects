@@ -1,63 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Prise en main</title>
     <link rel="icon" type="image/x-icon" href="../ressources/icons/web_icon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #dabd93;
+            text-align: justify;
+        }
+
+        section {
+            margin-bottom: 30px;
+            text-align: justify;
+            background-color: #fae7c3;
+            padding: 15px;
+            padding-top: 5px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 4px;
+        }
+
+        button {
+            width: fit-content;
+            height: 50px;
+            border-radius: 8px;
+            border: none;
+            background-color: #1e1e9a;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #0d0d71;
+        }
+
+        #balises {
+            width: fit-content;
+            margin-left: 20px;
+            background-color: #f7cfab;
+            border-radius: 4px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            list-style-type: none;
+        }
+
+        #balises li {
+            margin-bottom: 5px;
+        }
+
+        #balises li:hover {
+            font-weight: bold;
+            color: #db2222;
+        }
+
+        #image {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-<h1>Toturiel de prise en main HTML</h1>
-<p>Ceci est une page HTML basique pour se refaire la main sur le développement de pages web. Le but derrière l'élaboration de cette page est de revoir les bases du développement web.</br>
-Au travers de cette page, nous allons revoir les fondamentaux de HTML, les balises et leur utilisation. On étudiera aussi l'utilisation du CSS permettant de modifier le style des pages, ainsi que l'utilisation de JavaScript pour ajouter des fonctionnalités interactives.</p>
+    <header>
+        <h1>Tutoriel de prise en main HTML</h1>
+        <p>Ceci est une page HTML basique pour se refaire la main sur le développement de pages web. Le but derrière l'élaboration de cette page est de revoir les bases du développement web.<br>
+    Au travers de cette page, nous allons revoir les fondamentaux de HTML, les balises et leur utilisation. On étudiera aussi l'utilisation du CSS permettant de modifier le style des pages, ainsi que l'utilisation de JavaScript pour ajouter des fonctionnalités interactives.</p>
+    </header>
 
-<section>
-    <h2>Qu'est-ce que HTML ?</h2>
-    <p>HTML signifie « HyperText Markup Language » qu'on peut traduire par « langage de balises pour l'hypertexte ». Il est utilisé afin de créer et de représenter le contenu d'une page web et sa structure. D'autres technologies sont utilisées avec HTML pour décrire la présentation d'une page (CSS) et/ou ses fonctionnalités interactives (JavaScript). (Source : <a href="https://developer.mozilla.org/fr/docs/Web/HTML">MDN Web Docs</a>)</p>
-</section>
+    <main>
+        <section>
+            <h2>Qu'est-ce que HTML ?</h2>
+            <p>HTML signifie « HyperText Markup Language » qu'on peut traduire par « langage de balises pour l'hypertexte ». Il est utilisé afin de créer et de représenter le contenu d'une page web et sa structure. D'autres technologies sont utilisées avec HTML pour décrire la présentation d'une page (CSS) et/ou ses fonctionnalités interactives (JavaScript). (Source : <a href="https://developer.mozilla.org/fr/docs/Web/HTML">MDN Web Docs</a>)</p>
+        </section>
 
-<section>
-    <h2>Les balises</h2>
-    <p>Une page HTML est composée de balises. Les balises sont des éléments qui permettent de structurer le contenu d'une page web. Elles sont généralement écrites entre des chevrons (<code>&lt;...&gt;</code>) et peuvent contenir du texte, d'autres balises ou des attributs.</p>
-    <p>Voici une liste non exhaustive des balises HTML les plus courantes :</p>
-    <ul id="balises">
-        <li>&lt;html&gt; : Élément racine d'une page HTML</li>
-        <li>&lt;head&gt; : Les métadonnées de la page</li>
-        <li>&lt;title&gt; : Titre de la page</li>
-        <li>&lt;body&gt; : Contenu de la page</li>
-        <li>&lt;h1&gt; à &lt;h6&gt; : Titres</li>
-        <li>&lt;p&gt; : Paragraphe</li>
-        <li>&lt;a&gt; : Lien</li>
-        <li>&lt;img&gt; : Image</li>
-        <li>&lt;ul&gt; : Liste non ordonnée</li>
-        <li>&lt;ol&gt; : Liste ordonnée</li>
-        <li>&lt;li&gt; : Élément de liste</li>
-    </ul>
-</section>
+        <section>
+            <h2>Les balises</h2>
+            <p>Une page HTML est composée de balises. Les balises sont des éléments qui permettent de structurer le contenu d'une page web. Elles sont généralement écrites entre des chevrons (<code>&lt;...&gt;</code>) et peuvent contenir du texte, d'autres balises ou des attributs.</p>
+            <p>Voici une liste non exhaustive des balises HTML les plus courantes :</p>
+            <ul id="balises">
+                <li>&lt;html&gt; : Élément racine d'une page HTML</li>
+                <li>&lt;head&gt; : Les métadonnées de la page</li>
+                <li>&lt;title&gt; : Titre de la page</li>
+                <li>&lt;body&gt; : Contenu de la page</li>
+                <li>&lt;h1&gt; à &lt;h6&gt; : Titres</li>
+                <li>&lt;p&gt; : Paragraphe</li>
+                <li>&lt;a&gt; : Lien</li>
+                <li>&lt;img&gt; : Image</li>
+                <li>&lt;ul&gt; : Liste non ordonnée</li>
+                <li>&lt;ol&gt; : Liste ordonnée</li>
+                <li>&lt;li&gt; : Élément de liste</li>
+            </ul>
+        </section>
 
-<section>
-    <h2>Le CSS</h2>
-    <p>Le CSS (Cascading Style Sheets) est un langage de style utilisé pour décrire la présentation d'un document HTML. Il permet de modifier l'apparence des éléments HTML, tels que les couleurs, les polices, les marges, les bordures, etc. Le CSS peut être intégré directement dans le fichier HTML ou être lié à un fichier externe.</p>
-    <p>Voici un exemple de code CSS :</p>
-    <pre class="language"><code>body {
+        <section>
+            <h2>Le CSS</h2>
+            <p>Le CSS (Cascading Style Sheets) est un langage de style utilisé pour décrire la présentation d'un document HTML. Il permet de modifier l'apparence des éléments HTML, tels que les couleurs, les polices, les marges, les bordures, etc. Le CSS peut être intégré directement dans le fichier HTML ou être lié à un fichier externe.</p>
+            <p>Voici un exemple de code CSS :</p>
+            <pre class="language"><code>body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
-}</code></pre>
+    }</code></pre>
 
-<p>Aujourd'hui, il existe des frameworks CSS comme <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap</a> ou Foundation qui facilitent la création de designs responsives. Néanmoins, avec un simple fichier CSS, il est possible de créer des designs modernes et attrayants.</p>
-</section>
+            <p>Aujourd'hui, il existe des frameworks CSS comme <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap</a> ou Foundation qui facilitent la création de designs responsives. Néanmoins, avec un simple fichier CSS, il est possible de créer des designs modernes et attrayants.</p>
+        </section>
 
-<section>
-    <h2>Gestion d'évènements</h2>
-    <p>La gestion d'évènements se fait via l'utilisation de JavaScript afin de rendre les pages web interactives. Pour faire appel à Javascript, il existe deux méthodes :</p>
-    <ul>
-        <li>Soit en rédigeant le code dans un fichier .js qui sera ensuite appelé dans le fichier HTML via l'ajout d'une balise <b>&lt;script&gt;</b>.</li>
-        <li>Soit en rédigeant le code directement dans la balise <b>&lt;script&gt;</b> du fichier HTML.</li>
-    </ul>
-    </p>
+        <section>
+            <h2>Gestion d'évènements</h2>
+            <p>La gestion d'évènements se fait via l'utilisation de JavaScript afin de rendre les pages web interactives. Pour faire appel à Javascript, il existe deux méthodes :</p>
+            <ul>
+                <li>Soit en rédigeant le code dans un fichier .js qui sera ensuite appelé dans le fichier HTML via l'ajout d'une balise <b>&lt;script&gt;</b>.</li>
+                <li>Soit en rédigeant le code directement dans la balise <b>&lt;script&gt;</b> du fichier HTML.</li>
+            </ul>
 
-    Le code JavaScript est écrit de la manière suivante :
-    <pre class="language"><code><b>&lt;script&gt;</b>    
+            <p>Le code JavaScript est écrit de la manière suivante :</p>
+            <pre class="language"><code><b>&lt;script&gt;</b>    
     let nbClick = 0;
 
     function nbClickCount() {
@@ -66,110 +130,50 @@ Au travers de cette page, nous allons revoir les fondamentaux de HTML, les balis
     }
 <b>&lt;/script&gt;</b></code></pre>
 
-    <p>Les boutons ci-dessous permettent de tester la gestion d'évènements :</p>
+            <p>Les boutons ci-dessous permettent de tester la gestion d'évènements :</p>
 
-    <button onclick="nbClickCount()">Afficher une alerte</button>
-    <button id="showImageBtn" onclick="showImage()">Afficher une image</button>
-    <button onclick="setRandomColor()">Changer la couleur de fond de la page</button>
+            <button onclick="nbClickCount()">Afficher une alerte</button>
+            <button id="showImageBtn" onclick="showImage()">Afficher une image</button>
+            <button onclick="setRandomColor()">Changer la couleur de fond de la page</button>
 
-    <div id="image" style="display: none;">
-        <p>Voici une image de la Tour Eiffel :</p>
-        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/330px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Tour Eiffel" width="330" height="220">
-    </div>
-</section>
+            <div id="image">
+                <p>Voici une image de la Tour Eiffel :</p>
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/330px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Tour Eiffel" width="330" height="220">
+            </div>
+        </section>
+    </main>
+    <script>
+        let nbClick = 0;
 
+        function nbClickCount() {
+            nbClick++;
+            alert("Vous avez cliqué sur ce bouton "+nbClick+" fois")
+        }
 
+        function showImage() {
+            if (document.getElementById("image").style.display === "block") {
+                document.getElementById("image").style.display = "none";
+                document.getElementById("showImageBtn").innerText = "Afficher une image";
+            } else {
+                document.getElementById("image").style.display = "block";
+                document.getElementById("showImageBtn").innerText = "Cacher l'image";
+            }
+        }
+
+        // Les fonctions ci-dessous permettent de générer une couleur aléatoire et de l'appliquer à un élément HTML avec l'ID "colorpad"
+        // Ils s'agit de fonctions JavaScript prises de StackOverflow (https://stackoverflow.com/questions/1484506/random-color-generator)
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function setRandomColor() {
+            document.body.style.backgroundColor = getRandomColor();
+        }
+    </script>
 </body>
-<script>
-    let nbClick = 0;
-
-    function nbClickCount() {
-        nbClick++;
-        alert("Vous avez cliqué sur ce bouton "+nbClick+" fois")
-    }
-
-    function showImage() {
-        if (document.getElementById("image").style.display === "block") {
-            document.getElementById("image").style.display = "none";
-            document.getElementById("showImageBtn").innerText = "Afficher une image";
-        } else {
-            document.getElementById("image").style.display = "block";
-            document.getElementById("showImageBtn").innerText = "Cacher l'image";
-        }
-    }
-
-    // Les fonctions ci-dessous permettent de générer une couleur aléatoire et de l'appliquer à un élément HTML avec l'ID "colorpad"
-    // Ils s'agit de fonctions JavaScript prises de StackOverflow (https://stackoverflow.com/questions/1484506/random-color-generator)
-    function getRandomColor() {
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
-
-    function setRandomColor() {
-        document.body.style.backgroundColor = getRandomColor();
-    }
-
-</script>
-<style>
-
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 20px;
-        background-color: #dabd93;
-        text-align: justify;
-    }
-
-    section {
-        margin-bottom: 30px;
-        text-align: justify;
-        background-color: #fae7c3;
-        padding: 15px;
-        padding-top: 5px;
-        border-radius: 4px;
-    }
-
-    pre {
-        background-color: #f4f4f4;
-        padding: 10px;
-        font-family: 'Courier New', Courier, monospace;
-        border-radius: 4px;
-    }
-
-    button {
-        width: -webkit-fit-content;
-        height: 50px;
-        border-radius: 8px;
-        border: none;
-        background-color: #1e1e9a;
-        color: white;
-    }
-
-    button:hover {
-        background-color: #0d0d71;
-    }
-
-    #balises {
-        width: fit-content;
-        margin-left: 20px;
-        background-color: #f7cfab;
-        border-radius: 4px;
-        padding: 10px;
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        list-style-type: none;
-    }
-
-    #balises li {
-        margin-bottom: 5px;
-    }
-
-    #balises li:hover {
-        font-weight: bold;
-        color: #db2222;
-    }
-</style>
 </html>
