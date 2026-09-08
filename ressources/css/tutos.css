@@ -1,0 +1,27 @@
+body {
+    background-color: #4d8dce;
+}
+
+#navigation {
+    max-width: 600px;
+    height: 600px;
+    font-size: 18px;
+    background-color: #a0c1e2;
+}
+
+#tutorials {
+    max-height: 540px;
+    overflow-y: auto;
+}
+
+#tutorials li {
+    padding: 10px;
+    border :none;
+}
+
+#tutorials li:hover {
+    background-color: #c2def8;
+    transition: all 0.3s ease;
+    text-decoration: bold;
+    color: #152fc4;
+}
