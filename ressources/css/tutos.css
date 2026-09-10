@@ -26,6 +26,11 @@ body {
     color: #152fc4;
 }
 
+#tutorials-title {
+    font-size: 20px;
+    color: #0b1969;
+}
+
 #project-name {
     font-weight: bold;
     color: #b7d841;
@@ -35,3 +40,4 @@ body {
     color: #5fd841;
     cursor: pointer;
 }
+
